@@ -1,0 +1,29 @@
+ body
+  {
+    margin: 0; padding: 0;
+    background-color: #131313;
+    color: #ECECEC;
+  }
+
+ #content
+ {
+   width: 950px;
+   border: medium #909090 solid;
+ }
+  .description
+  {
+    display: inline-block;
+    width: 200px;
+    max-width: 200px;
+    text-align: right;
+    color: #ECECEC;
+    vertical-align: middle;
+  }
+  
+  .fields
+  {
+    display: inline-block;
+    
+    vertical-align: middle;
+  }
+  

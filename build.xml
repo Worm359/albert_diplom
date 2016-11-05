@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="albert_diplom" default="all">
+  
+  
+  <property file="build.properties"/>
+
+  <target name="make.dirs" description="make some dirs">
+    <echo>Make dir directory task</echo>
+    <mkdir dir="${build.dir}/build"/>
+  </target>
+  
+  <target name="all" description="build all">
+    <echo>Start building</echo>
+  </target>
+</project>

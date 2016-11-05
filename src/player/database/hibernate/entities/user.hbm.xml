@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="player.database.hibernate.entities">
+  <class name="User" table="USERS">
+    <id name="userID" column="USER_ID" length="20">
+      <generator class="assigned"></generator>
+    </id>
+    <!--<many-to-one name="userID" cascade="delete"-->
+    <property name="userPassword" column="USER_PASS" not-null="true" length="20" />
+
+    <set name="subscriptions" table="SUBSCRIBERS"  lazy="true" fetch="select" inverse="true"  cascade="delete">
+      <key>
+        <!--<column name="USER_ID" /> --><!--not-null="true" -->
+        <column name="SUBSCRIBER_ID" />
+      </key>
+      <one-to-many class="Subscription" />
+    </set>
+
+    <set name="subscribers" table="SUBSCRIBERS"  lazy="true" fetch="select"  inverse="true" cascade="delete">
+            <key>
+              <column name="USER_ID" />
+            </key>
+      <one-to-many class="Subscription"/>
+    </set>
+
+
+
+  </class>
+</hibernate-mapping>

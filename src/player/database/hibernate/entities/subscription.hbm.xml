@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="player.database.hibernate.entities">
+  <class name="Subscription" table="SUBSCRIBERS">
+
+
+      <composite-id>
+          <key-many-to-one name="subscriber" class="User">
+              <column name="SUBSCRIBER_ID" not-null="true" length="20" />
+          </key-many-to-one>
+          <key-many-to-one name="user" class="User">
+              <column name="USER_ID" not-null="true" length="20" />
+          </key-many-to-one>
+      </composite-id>
+
+
+  </class>
+  </hibernate-mapping>
+
+
+
+
+
+      <!--<id name="sub_id" column="SUBSCRIPTION_ID">
+          <generator class="identity"></generator>
+      </id>
+      <properties name="unique_fields" unique="true">
+          <property name="subscriberID" not-null="true"/>
+          <property name="userID" not-null="true"/>
+      </properties>-->
+
+    <!--<id name="subscriberID" column="SUBSCRIBER_ID">
+      <generator class="assigned"></generator>
+    </id>
+    <id name="userID" column="USER_ID">
+      <generator class="assigned"></generator>
+    </id>
+-->

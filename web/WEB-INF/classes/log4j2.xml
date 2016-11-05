@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration>
+  <appenders>
+
+    <Console name="myapp" target="SYSTEM_OUT">
+      <PatternLayout pattern="%-5p %c:%L -------> %m%n" />
+    </Console>
+
+  </appenders>
+
+  <!-- Корневой logger -->
+  <loggers>
+
+    <logger name="player" level="debug" additivity="false">
+      <AppenderRef ref="myapp" />
+    </logger>
+
+    <Root level="error">
+      <AppenderRef ref="myapp" />
+    </Root>
+
+  </loggers>
+</configuration>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context reloadable="false" privileged="true">
+
+    <WatchedResource>WEB-INF/web.xml</WatchedResource>
+    <!--<Manager pathname="" />-->
+    <Resource name="jdbc/playerDB" auth="Container"
+              type="javax.sql.DataSource" maxActive="100"
+              maxIdle="30" maxWait="10000"
+              username="diplom_user"
+              password="gfhfpfehjkjd359"
+              driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/playerdb?useSSL=false"
+    />
+    <!--
+    useSSL="false"
+
+    <Resource name="hibernate/player_session" auth="Container"
+              type="player.database.hibernate.utilities.SessionFactoryRegisterer"
+              />
+    -->
+</Context>
